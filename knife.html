@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Flappy circle</title>
+        <style type="text/css">
+            canvas {
+                display: block;
+                /* The image used */
+                background-image: url("flappybackground.png");
+
+                /* Full height */
+                height: 100%;
+
+                /* Center and scale the image nicely */
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            body {
+                margin: 0;
+                width: 100%;
+                height: 100%;
+            }
+            #diffuculty {
+                display: flex;
+                inset: 0;
+                position: fixed;
+                align-items: center;
+                justify-content: center;
+            }
+            #dcontent {
+                background-color: white;
+                width: 40%;
+                height: 20%;
+                padding: 6px;
+                text-align: center;
+                border-radius: 30px;
+            }
+            #buttons {
+                display: grid;
+                gap: 7px;
+            }
+            #easy {
+                background-color: rgb(32, 251, 12);
+            }
+            #medium {
+                background-color: rgb(246, 182, 5);
+            }
+            #hard {
+                background-color: rgb(251, 12, 12);
+            }
+            #impossible {
+                background-color: rgb(102, 0, 198);
+            }
+            #endscreen {
+                display: flex;
+                inset: 0;
+                position: fixed;
+                align-items: center;
+                justify-content: center;
+                
+            }
+            #escontent {
+                background-color: white;
+                width: 40%;
+                height: 20%;
+                padding: 6px;
+                text-align: center;
+                border-radius: 30px;
+            }
+            h1 {
+                font-size: 50px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            p {
+                font-size: large;
+                font-family: Arial, Helvetica, sans-serif;
+                color: gray;
+            }
+            #startGameBtn {
+                background-color: rgb(22, 246, 22);
+                width: 100%;
+                height: 40px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 30px;
+                border-radius: 10px;
+            }
+            #score {
+                position: fixed;
+                display: flex;
+                inset: 0;
+                padding: 200px;
+                justify-content: center;
+                user-select: none;
+            }
+            h2 {
+                font-size: 40px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id = "score"><h2>Score:</h2><h2 id="scoreEl">0</h2></div>
+        <div id = "diffuculty">
+            <div id = "dcontent">
+                <h1>Difficulty</h1>
+                <div id = "buttons">
+                    <button id = "easy">Easy</button>
+                    <button id = "medium">Medium</button>
+                    <button id = "hard">Hard</button>
+                    <button id = "impossible">Impossible</button>
+                </div>
+            </div>
+        </div>
+        <div id = "endscreen">
+            <div id = "escontent">
+                <h1 id = "bigScoreEl">0</h1>
+                <p>Points</p>
+                <div>
+                    <button id = "startGameBtn">Start Game</button>
+                </div>
+                
+            </div>
+        </div>
+
+        <canvas></canvas>
+        <div style="display: none;">
+            <img id = "pimage" src="pipe.png" width="225" height = "1000" />
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
